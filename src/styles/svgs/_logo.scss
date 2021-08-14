@@ -1,0 +1,62 @@
+@use "sass:math";
+@use '../mixins/breakpoints';
+@use '../sizes';
+@use '../mixins/animations';
+
+$tablet-height: 32rem;
+$laptop-height: 22vh;
+$portrait-height: 20vw;
+
+.logo {
+  max-height: $tablet-height;
+  height: $tablet-height;
+  margin-top: 1px;
+  margin-right: -1px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  fill: var(--background-color);
+  stroke: var(--color);
+  visibility: visible;
+
+  @include breakpoints.tablet {
+    position: fixed;
+    top: 0;
+    left: unset;
+    right: 0;
+    transform: unset;
+  }
+
+  @include breakpoints.laptop {
+    h1 & {
+      display: none;
+    }
+
+    position: absolute;
+    top: 18%;
+    right: 15%;
+    height: $laptop-height;
+    fill: var(--color);
+    stroke: var(--background-color);
+
+    @include breakpoints.portrait {
+      height: $portrait-height;
+    }
+  }
+
+  .letter {
+    stroke-width: 1.5;
+    opacity: 0;
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i}) {
+        @include animations.animation(
+          #{0.15 * $i}s,
+          #{1.5 - math.div(0.85, $i)}s,
+          slide-left
+        );
+      }
+    }
+  }
+}

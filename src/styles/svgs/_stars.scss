@@ -1,0 +1,19 @@
+@use './index' as svg;
+@use '../mixins/animations';
+@use '../mixins/breakpoints';
+@use "sass:math";
+
+.stars {
+  position: relative;
+  top: 25%;
+
+  .star {
+    opacity: 0;
+
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i}) {
+        @include animations.animation(#{0.75 + $i}s, 3s, blink, infinite);
+      }
+    }
+  }
+}

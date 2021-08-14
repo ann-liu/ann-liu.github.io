@@ -1,0 +1,1 @@
+const animationTimeMs=11500,laptopWidth=1440;document.addEventListener("DOMContentLoaded",(()=>{setInterval((()=>{Array.from(document.querySelectorAll(".code")).forEach((e=>{e.parentNode.replaceChild(e.cloneNode(!0),e)}))}),11500)}));

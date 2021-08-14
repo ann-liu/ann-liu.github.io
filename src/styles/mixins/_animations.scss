@@ -1,0 +1,83 @@
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@include keyframes(slide-left) {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  65%,
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@include keyframes(fade-in) {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@include keyframes(blink) {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+}
+
+@include keyframes(drip) {
+  0% {
+    transform: translateY(0%);
+  }
+  40%,
+  100% {
+    transform: translateY(19%);
+  }
+}
+
+@include keyframes(appear) {
+  from {
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+}
+
+@include keyframes(drop-down) {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(80vh);
+  }
+}
+
+@mixin animation(
+  $delay,
+  $duration,
+  $animation,
+  $iteration: 1,
+  $animation-fill-mode: forwards
+) {
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-name: $animation;
+  animation-iteration-count: $iteration;
+  animation-fill-mode: $animation-fill-mode;
+}

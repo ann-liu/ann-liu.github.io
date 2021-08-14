@@ -1,0 +1,37 @@
+@use '../mixins/animations';
+@use '../mixins/breakpoints';
+@use '../sizes';
+@use './index' as svg;
+
+.monitors {
+  position: absolute;
+  left: 50%;
+  bottom: 15%;
+  transform: translateX(-50%);
+  stroke-width: svg.$stroke-width-lg;
+
+  @include breakpoints.laptop {
+    max-width: 35%;
+  }
+
+  @include breakpoints.portrait {
+    bottom: 22%;
+    transform: scale(1.5) translateX(-30%);
+  }
+
+  .code-editor {
+    fill: svg.$stroke;
+  }
+
+  .code-block {
+    .code {
+      visibility: hidden;
+
+      @for $i from 1 through 76 {
+        &:nth-child(#{$i}) {
+          @include animations.animation(#{$i * 0.15}s, 1s, appear, infinite);
+        }
+      }
+    }
+  }
+}
