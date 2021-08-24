@@ -20,4 +20,8 @@ $height: sizes.$size-6;
   @include breakpoints.laptop {
     animation: unset;
   }
+
+  @include breakpoints.mobile-landscape {
+    display: none;
+  }
 }

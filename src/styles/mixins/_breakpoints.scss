@@ -1,3 +1,4 @@
+$mobile-max-height: 500px;
 $mobile-min: 576px;
 $tablet-min: 768px;
 $laptop-min: 1024px;
@@ -17,13 +18,7 @@ $widescreen-min: 2560px;
 }
 
 @mixin mobile-landscape {
-  @media (min-width: #{$mobile-min}) and (orientation: landscape) {
-    @content;
-  }
-}
-
-@mixin mobile-only {
-  @media (min-width: #{$mobile-min}) and (max-width: #{$tablet-min}) {
+  @media (max-height: $mobile-max-height) and (orientation: landscape) {
     @content;
   }
 }

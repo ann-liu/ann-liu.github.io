@@ -64,4 +64,8 @@ $border-style: $border-width inset var(--color);
       display: none;
     }
   }
+
+  @include breakpoints.mobile-landscape {
+    display: none;
+  }
 }

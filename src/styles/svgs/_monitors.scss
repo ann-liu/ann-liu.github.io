@@ -6,16 +6,15 @@
 .monitors {
   position: absolute;
   left: 50%;
-  bottom: 15%;
+  bottom: 17%;
   transform: translateX(-50%);
   stroke-width: svg.$stroke-width-lg;
-
-  @include breakpoints.laptop {
-    max-width: 35%;
-  }
+  height: 35%;
 
   @include breakpoints.portrait {
     bottom: 22%;
+    height: auto;
+    width: 50%;
     transform: scale(1.5) translateX(-30%);
   }
 

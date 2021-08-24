@@ -19,7 +19,6 @@ $portrait-height: 20vw;
   z-index: 1000;
   fill: var(--background-color);
   stroke: var(--color);
-  visibility: visible;
 
   @include breakpoints.tablet {
     position: fixed;
@@ -44,6 +43,12 @@ $portrait-height: 20vw;
     @include breakpoints.portrait {
       height: $portrait-height;
     }
+  }
+
+  @include breakpoints.mobile-landscape {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .letter {
