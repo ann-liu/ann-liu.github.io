@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{setInterval(()=>{let e=Array.from(document.querySelectorAll(".code"));e.forEach(e=>{e.parentNode?.replaceChild(e.cloneNode(!0),e)})},11500)});
