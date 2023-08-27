@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.code')
     );
     codeSvgs.forEach(code => {
-      code.parentNode.replaceChild(code.cloneNode(true), code);
+      code.parentNode?.replaceChild(code.cloneNode(true), code);
     });
   }, animationTimeMs);
 });

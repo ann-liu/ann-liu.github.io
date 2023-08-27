@@ -1,4 +1,4 @@
-@use "sass:math";
+@use 'sass:math';
 @use '../mixins/breakpoints';
 @use '../sizes';
 @use '../mixins/animations';
@@ -53,7 +53,7 @@ $portrait-height: 20vw;
 
   .letter {
     stroke-width: 1.5;
-    opacity: 0;
+    visibility: hidden;
     @for $i from 1 through 6 {
       &:nth-child(#{$i}) {
         @include animations.animation(

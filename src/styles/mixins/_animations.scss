@@ -6,13 +6,13 @@
 
 @include keyframes(slide-left) {
   0% {
+    visibility: hidden;
     transform: translateX(100%);
-    opacity: 0;
   }
   65%,
   100% {
     transform: translateX(0%);
-    opacity: 1;
+    visibility: visible;
   }
 }
 
