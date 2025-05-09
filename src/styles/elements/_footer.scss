@@ -1,9 +1,8 @@
-@use '../sizes';
 @use '../mixins/breakpoints';
 @use '../mixins/animations';
 
 $font-size: 2.4rem;
-$height: sizes.$size-6;
+$height: 8rem;
 
 .footer {
   @include animations.animation(0.25s, 2.25s, fade-in, 1, both);
@@ -15,7 +14,7 @@ $height: sizes.$size-6;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--color);
+  color: #000;
 
   @include breakpoints.laptop {
     animation: unset;

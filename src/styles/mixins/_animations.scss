@@ -28,43 +28,12 @@
   }
 }
 
-@include keyframes(blink) {
-  0% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 1;
-  }
-  60% {
-    opacity: 0;
-  }
-}
-
-@include keyframes(drip) {
-  0% {
-    transform: translateY(0%);
-  }
-  40%,
-  100% {
-    transform: translateY(19%);
-  }
-}
-
 @include keyframes(appear) {
   from {
     visibility: hidden;
   }
   to {
     visibility: visible;
-  }
-}
-
-@include keyframes(drop-down) {
-  from {
-    transform: translateY(0%);
-  }
-  to {
-    transform: translateY(80vh);
   }
 }
 

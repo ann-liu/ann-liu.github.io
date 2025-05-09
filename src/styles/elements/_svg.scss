@@ -1,24 +1,56 @@
 @use 'sass:math';
-@use '../mixins/breakpoints';
-@use '../sizes';
 @use '../mixins/animations';
+@use '../mixins/breakpoints';
 
 $tablet-height: 32rem;
 $laptop-height: 22vh;
 $portrait-height: 20vw;
+$stroke-color: #000;
+$fill-color: #fff;
 
-.logo {
-  max-height: $tablet-height;
+.svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  &.fg {
+    height: 105%;
+    width: auto;
+  }
+
+  &.bg {
+    width: 115%;
+    height: 105%;
+  }
+
+  .code {
+    > circle {
+      visibility: hidden;
+
+      @for $i from 1 through 76 {
+        &:nth-child(#{$i}) {
+          @include animations.animation(#{$i * 0.15}s, 1s, appear, infinite);
+        }
+      }
+    }
+  }
+
+  .svg-link:hover {
+    transition: 0.25s;
+    transform: translate(-3%, -6%) scale(1.1);
+  }
+}
+
+.text {
   height: $tablet-height;
-  margin-top: 1px;
-  margin-right: -1px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1000;
-  fill: var(--background-color);
-  stroke: var(--color);
+  fill: $fill-color;
+  stroke: $stroke-color;
 
   @include breakpoints.tablet {
     position: fixed;
@@ -34,11 +66,11 @@ $portrait-height: 20vw;
     }
 
     position: absolute;
-    top: 18%;
-    right: 15%;
+    top: 20.5%;
+    right: 10.5%;
     height: $laptop-height;
-    fill: var(--color);
-    stroke: var(--background-color);
+    fill: rgba(255, 255, 255, 0.9);
+    stroke: $stroke-color;
 
     @include breakpoints.portrait {
       height: $portrait-height;

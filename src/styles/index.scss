@@ -1,27 +1,11 @@
 @use './reset';
-@use './typography';
-@use './colors';
-
 @use './elements/footer';
 @use './elements/main';
-
-@use './svgs/coffee';
-@use './svgs/developer';
-@use './svgs/logo';
-@use './svgs/monitors';
-@use './svgs/plant';
-@use './svgs/rain';
-@use './svgs/stars';
-@use './svgs/window';
+@use './elements/svg';
 
 @font-face {
   font-family: 'Damase';
   src: url('damase.woff2') format('woff2');
-}
-
-:root {
-  --color: #{colors.$black};
-  --background-color: #{colors.$white};
 }
 
 html,
