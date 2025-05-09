@@ -4,8 +4,7 @@
   "description": "",
   "scripts": {
     "start": "parcel src/index.html --no-cache",
-    "build": "npm run clean && parcel build src/index.html --no-source-maps --public-url '.'",
-    "clean": "rm -rf dist"
+    "build": "parcel build src/index.html --no-source-maps --public-url '.'"
   },
   "author": "ann liu",
   "license": "ISC",
