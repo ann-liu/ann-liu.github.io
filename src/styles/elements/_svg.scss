@@ -36,9 +36,13 @@ $fill-color: #fff;
     }
   }
 
-  .svg-link:hover {
-    transition: 0.25s;
-    transform: translate(-3%, -6%) scale(1.1);
+  .svg-link {
+    transform-origin: 25% 25%;
+    transform-box: fill-box;
+    &:hover {
+      transition: 0.15s;
+      transform: scale(1.05);
+    }
   }
 }
 
