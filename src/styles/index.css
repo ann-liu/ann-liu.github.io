@@ -1,0 +1,104 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.svgs {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  align-items: center;
+  overflow: hidden;
+  height: 85svmin;
+  width: 85svmin;
+  border: 2px solid #000;
+
+  > svg {
+    position: relative;
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  .bg {
+    width: 106%;
+    height: 105%;
+    left: -5%;
+  }
+
+  .fg {
+    height: 108%;
+    width: auto;
+    left: -9%;
+    top: 2%;
+  }
+}
+
+@keyframes drift {
+  0% {
+    transform: translateX(50%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+.drift {
+  animation: drift 110s ease-in-out infinite;
+}
+
+@keyframes appear {
+  from {
+    visibility: hidden;
+  }
+
+  to {
+    visibility: visible;
+  }
+}
+
+@keyframes slide {
+  0% {
+    visibility: hidden;
+    transform: translateX(100%);
+  }
+  65%,
+  100% {
+    transform: translateX(0%);
+    visibility: visible;
+  }
+}
+
+.code {
+  > circle {
+    visibility: hidden;
+  }
+}
+
+.link {
+  transform-origin: 50% 40%;
+  transform-box: fill-box;
+  transition: 0.3s;
+}
+
+.link:hover {
+  transform: scale(1.2);
+}
+
+.letter {
+  visibility: hidden;
+}
