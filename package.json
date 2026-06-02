@@ -11,7 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "@rsbuild/core": "^2.0.3",
-    "rsbuild-plugin-html-minifier-terser": "^1.1.3"
+    "rsbuild-plugin-html-minifier-terser": "^1.1.3",
+    "typescript": "^6.0.3"
   },
   "browserslist": "defaults"
 }
