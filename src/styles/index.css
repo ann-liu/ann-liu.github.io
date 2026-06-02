@@ -45,22 +45,6 @@ body {
   }
 }
 
-@keyframes drift {
-  0% {
-    transform: translateX(50%);
-  }
-  50% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(50%);
-  }
-}
-
-.drift {
-  animation: drift 110s ease-in-out infinite;
-}
-
 @keyframes appear {
   from {
     visibility: hidden;
