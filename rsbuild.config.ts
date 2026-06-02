@@ -8,9 +8,14 @@ export default defineConfig({
       index: "./src/scripts/index.ts",
     },
   },
-  plugins: [pluginHtmlMinifierTerser()],
+  plugins: [
+    pluginHtmlMinifierTerser({
+      removeComments: true,
+    }),
+  ],
   html: {
     template: "./static/index.html",
+    favicon: "./static/favicon.ico",
   },
   output: {
     minify: true,
