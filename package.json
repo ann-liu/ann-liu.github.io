@@ -10,8 +10,8 @@
   "author": "ann liu",
   "license": "ISC",
   "devDependencies": {
-    "@rsbuild/core": "^2.0.9",
-    "rsbuild-plugin-html-minifier-terser": "^1.1.4",
+    "@rsbuild/core": "^2.1.2",
+    "rsbuild-plugin-html-minifier-terser": "^1.1.5",
     "typescript": "^6.0.3"
   },
   "browserslist": "defaults"
